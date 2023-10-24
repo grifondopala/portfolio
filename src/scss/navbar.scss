@@ -1,0 +1,177 @@
+.navbar {
+  width: 100vw;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: var(--dark-blue-gray);
+  opacity: 0.98;
+  z-index: 10;
+}
+
+.button{
+
+  box-sizing: border-box;
+  padding: 10px;
+  border: var(--dark-blue-gray) 2px solid;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+
+  label {
+    color: var(--day-sky-blue);
+    font-size: 14px;
+    user-select: none;
+    cursor: pointer;
+  }
+
+}
+
+.button:hover {
+  border: var(--day-sky-blue) 2px solid;
+}
+
+.show-button{
+  width: 36px;
+  height: 36px;
+  background-color: var(--day-sky-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+  user-select: none;
+
+  img{
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.buttons-div{
+  display: grid;
+  width: 100%;
+  align-items: center;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding-right: 5%;
+  padding-left: 0%;
+  transition-timing-function: ease;
+
+  .buttons-div-h{
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  @media (min-width: 700px) {
+
+    .buttons-div-h{
+      flex-direction: row;
+      justify-content: end;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .buttons-div-h{
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+}
+
+@keyframes showNavbar {
+  from {
+    grid-template-rows: 0fr;
+  }
+
+  to {
+    grid-template-rows: 1fr;
+  }
+}
+
+@keyframes hideNavbar {
+  from {
+    grid-template-rows: 1fr;
+  }
+
+  to {
+    grid-template-rows: 0fr;
+  }
+}
+
+@media (min-width: 700px) {
+
+  .show-button{
+    display: none;
+  }
+
+  .button{
+    display: flex;
+    justify-content: center;
+  }
+
+  .button:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  .buttons-div{
+    grid-template-rows: 1fr;
+  }
+
+}
+
+@media (max-width: 700px) {
+
+  .buttons-div{
+    display: grid;
+  }
+
+  .buttons-div.first{
+    grid-template-rows: 0fr;
+  }
+
+  .navbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: auto;
+  }
+
+  .show-button{
+    margin: 10px auto 10px 5%;
+  }
+
+  .buttons-div.hide-navbar{
+    transition: all;
+    animation-name: hideNavbar;
+    animation-duration: 0.3s;
+    grid-template-rows: 0fr;
+  }
+  
+  .buttons-div.show-navbar{
+    transition: all;
+    animation-name: showNavbar;
+    animation-duration: 0.3s;
+    grid-template-rows: 1fr;
+  }
+
+}
+
+@media (max-width: 400px) {
+  .navbar{
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .show-button{
+    margin-left: 0px;
+    margin-right: auto;
+  }
+}

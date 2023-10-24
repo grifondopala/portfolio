@@ -1,0 +1,22 @@
+:root {
+  background-color: var(--dark-blue-gray);
+  scroll-behavior: smooth;
+}
+
+* {
+  font-family: "Merriweather", serif;
+}
+
+.container {
+  margin-top: 150px;
+  box-sizing: border-box;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+@media (max-width: 400px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}/*# sourceMappingURL=main.css.map */

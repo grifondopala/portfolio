@@ -1,0 +1,36 @@
+.header {
+  width: 60%;
+}
+
+.hello-text {
+  font-size: 18px;
+  color: var(--dodger-blue);
+  margin: 0;
+}
+
+.name-text {
+  font-size: 48px;
+  color: var(--cornflower-blue);
+  margin: 0;
+}
+
+.job-text {
+  font-size: 48px;
+  margin: 0;
+  color: var(--day-sky-blue);
+}
+
+.description-text {
+  color: var(--day-sky-blue);
+  margin-top: 25px;
+  line-height: 24px;
+}
+.description-text label {
+  font-weight: bold;
+}
+
+@media (max-width: 700px) {
+  .header {
+    width: 100%;
+  }
+}/*# sourceMappingURL=header.css.map */

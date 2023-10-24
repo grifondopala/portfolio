@@ -1,0 +1,72 @@
+.contacts {
+  margin-top: 300px;
+  margin-bottom: 100px;
+  box-sizing: border-box;
+  padding-top: 60px;
+  z-index: 0;
+}
+.contacts p {
+  color: var(--day-sky-blue);
+  margin: 0;
+  line-height: 24px;
+}
+.contacts .title {
+  color: var(--cornflower-blue);
+  margin: 0;
+  font-size: 32px;
+  text-decoration: none;
+  text-align: center;
+}
+.contacts .information {
+  width: 400px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  margin: 60px auto 0 auto;
+  gap: 20px;
+  justify-content: center;
+}
+.contacts .information p {
+  padding-left: 32px;
+  position: relative;
+  display: inline-flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contacts .information p::before {
+  content: "";
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  background-color: var(--cornflower-blue);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.contacts .information #telegram::before {
+  background-image: url("/public/photos/contacts/telegram-icon.png");
+}
+.contacts .information #mail::before {
+  background-image: url("/public/photos/contacts/mail-icon.png");
+}
+.contacts .information #mail {
+  grid-column: 1/3;
+}
+.contacts .information #phone::before {
+  background-image: url("/public/photos/contacts/phone-icon.png");
+}
+@media (max-width: 500px) {
+  .contacts .information {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .contacts .information p {
+    margin-left: 0;
+    margin-right: auto;
+  }
+}/*# sourceMappingURL=contacts.css.map */

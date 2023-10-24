@@ -1,0 +1,161 @@
+.projects {
+  margin-top: 300px;
+  box-sizing: border-box;
+  padding-top: 60px;
+  z-index: 0;
+}
+.projects .title {
+  color: var(--cornflower-blue);
+  margin: 0;
+  font-size: 32px;
+  text-decoration: none;
+}
+.projects .information {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.projects .information .project {
+  width: 90%;
+  display: grid;
+  grid-template-columns: calc(100% - 400px) 400px;
+  border-radius: 0 20px 20px 0;
+  background-color: var(--new-color);
+  cursor: pointer;
+}
+.projects .information .project .photo {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 0 20px 20px 0;
+}
+.projects .information .project .photo.nike {
+  background-image: url("/public/photos/projects/nike.gif");
+}
+.projects .information .project .photo.schedule {
+  background-image: url("/public/photos/projects/schedule.jpg");
+  background-position: left;
+}
+.projects .information .project .photo.picture_shop {
+  background-image: url("/public/photos/projects/picture-shop.jpg");
+}
+.projects .information .project .project_info {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 10px;
+  line-height: 24px;
+}
+.projects .information .project .project_title {
+  margin: 0;
+  font-weight: bold;
+  font-size: 18px;
+}
+.projects .information .project p {
+  color: var(--cornflower-blue);
+  margin-top: 5px;
+}
+.projects .information .project .points {
+  display: flex;
+  flex-direction: column;
+}
+.projects .information .project .points p {
+  padding-left: 16px;
+  position: relative;
+  display: inline-flex;
+}
+.projects .information .project .points p::before {
+  content: "";
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  background-color: var(--cornflower-blue);
+  background-blend-mode: color-dodge;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.projects .information .project .technologies {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+.projects .information .project .technologies p {
+  padding-left: 32px;
+  position: relative;
+  display: inline-flex;
+}
+.projects .information .project .technologies p::before {
+  content: "";
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  border-radius: 5px;
+  width: 24px;
+  height: 24px;
+  background-color: var(--cornflower-blue);
+  background-blend-mode: color-dodge;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.projects .information .project .technologies .ts::before {
+  background-image: url("/public/photos/projects/ts-icon.png");
+}
+.projects .information .project .technologies .go::before {
+  background-image: url("/public/photos/projects/go-icon.png");
+}
+.projects .information .project .technologies .react::before {
+  background-image: url("/public/logo192.png");
+}
+.projects .information .project:nth-child(even) {
+  margin-left: auto;
+  margin-right: 0;
+  grid-template-columns: 400px calc(100% - 400px);
+  border-radius: 20px 0 0 20px;
+}
+.projects .information .project:nth-child(even) .photo {
+  grid-row: 1;
+  border-radius: 20px 0 0 20px;
+}
+.projects .information .project:nth-child(even) .project_info {
+  grid-column: 2;
+}
+.projects .information .project:hover {
+  opacity: 0.9;
+}
+@media (max-width: 1000px) {
+  .projects .information .project {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    border-radius: 20px 20px 0 0;
+    background-color: var(--new-color);
+  }
+  .projects .information .project .photo {
+    order: 1;
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+    aspect-ratio: 16/9;
+  }
+  .projects .information .project:nth-child(even) {
+    border-radius: 20px 20px 0 0;
+  }
+  .projects .information .project:nth-child(even) .photo {
+    border-radius: 20px 20px 0 0;
+  }
+}
+@media (max-width: 400px) {
+  .projects .information .project .technologies {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}/*# sourceMappingURL=projects.css.map */
