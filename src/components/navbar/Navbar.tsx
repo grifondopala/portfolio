@@ -10,9 +10,7 @@ export function Navbar(){
 
     return(
         <div className={'navbar'}>
-            <div className={'show-button'} onClick={() => setIsShown((value) => !value)}>
-                <img src={'/photos/navbar/navigation-bar.png'}/>
-            </div>
+            <div className={'show-button'} onClick={() => setIsShown((value) => !value)} />
             <div className={`buttons-div ${isShown === null ? 'first' : isShown ? 'show-navbar' : 'hide-navbar'}`}>
                 <div className={'buttons-div-h'}>
                     <a className={'button'} href={"#about"} onClick={hideNavbar}>

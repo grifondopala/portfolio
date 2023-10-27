@@ -11,13 +11,6 @@ const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 
-const router = createBrowserRouter([
-    {
-        path: "/",
-        element: <Main />,
-    },
-]);
-
 root.render(
   <React.StrictMode>
       <Main />
